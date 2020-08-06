@@ -1,4 +1,4 @@
 package com.example.thedailystoic;
 
-public class TImePickerFragment {
+public class TimePickerFragment {
 }
