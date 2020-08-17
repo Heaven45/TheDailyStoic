@@ -10,20 +10,18 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
 import static com.example.thedailystoic.App.CHANNEL_1_ID;
 
 public class MainActivity extends AppCompatActivity {
 
     private NotificationManagerCompat notificationManager;
-    private TextView textViewQuote;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         notificationManager = NotificationManagerCompat.from(this);
     }
@@ -40,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickSendNotification(View view) {
         String title = "Quote of the day";
-        String message = "Ты пидор";
+        String message = "Здарова отец";
 
         Intent activityIntent = new Intent(this, PageActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this,
