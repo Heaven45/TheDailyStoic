@@ -10,15 +10,18 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 
 class MainActivity : AppCompatActivity() {
+
     private var notificationManager: NotificationManagerCompat? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         notificationManager = NotificationManagerCompat.from(this)
     }
 
-    fun onClickOpenPageActivity(view: View?) {
-        val intent = Intent(this, PageActivity::class.java)
+    fun onClickOpenQuotesActivity(view: View?) {
+        val intent = Intent(this, QuotesActivity::class.java)
         startActivity(intent)
     }
 

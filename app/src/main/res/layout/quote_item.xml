@@ -3,15 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/quote_textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Цитата"
+        android:layout_marginRight="8dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/small_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toEndOf="@id/quote_textView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onClickOpenPageActivity"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

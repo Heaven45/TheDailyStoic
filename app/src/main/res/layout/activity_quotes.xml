@@ -4,11 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
     tools:context=".QuotesActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rw_quotes"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:id="@+id/rwQuotes"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/quote_item" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/arrow_back"
+        android:onClick="onClickGoBack"
+        app:layout_constraintBottom_toTopOf="@+id/rwQuotes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
