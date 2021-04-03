@@ -16,6 +16,7 @@ import java.io.IOException;
 public class PageActivity extends AppCompatActivity {
 
     private static final String TAG = "DATE";
+
     TextView textViewDate;
     TextView textViewName;
     TextView textViewQuote;
