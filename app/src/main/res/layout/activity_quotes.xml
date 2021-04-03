@@ -23,10 +23,24 @@
         android:id="@+id/buttonBack"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/arrow_back"
         android:onClick="onClickGoBack"
         app:layout_constraintBottom_toTopOf="@+id/rwQuotes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:text="@string/quotesTitle"
+        app:layout_constraintBottom_toTopOf="@+id/rwQuotes"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
