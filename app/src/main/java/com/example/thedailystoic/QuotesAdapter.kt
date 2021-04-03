@@ -6,7 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class QuotesAdapter (private val values: List<String>) :
+class QuotesAdapter (
+        private val values: List<String>,
+        private val listener: OnItemClickListener) :
         RecyclerView.Adapter<QuotesAdapter.MyViewHolder>() {
 
     override fun getItemCount() = values.size
@@ -20,13 +22,25 @@ class QuotesAdapter (private val values: List<String>) :
         holder.quoteTextView?.text = values[position]
     }
 
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
         var quoteTextView: TextView? = null
         var smallTextView: TextView? = null
 
         init {
             quoteTextView = itemView?.findViewById(R.id.quote_textView)
             smallTextView = itemView?.findViewById(R.id.small_textView)
+
+            itemView.setOnClickListener(this)
         }
+
+        override fun onClick(v: View?) {
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position)
+            }
+        }
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
     }
 }
